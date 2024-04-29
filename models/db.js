@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 try {
-    mongoose.connect('mongodb+srv://Cluster34069:dVNQVUJKSFZS@cluster34069.u10anj3.mongodb.net/?retryWrites=true&w=majority&appName=Cluster34069');
+    mongoose.connect(`mongodb+srv://sulavneupane:ewub8E3nTXehkMpa@cluster34069.u10anj3.mongodb.net/?retryWrites=true&w=majority&appName=Cluster34069`);
     console.log('Connection succeeded');
 } catch (err) {
     console.log('Error in connection ' + err);
