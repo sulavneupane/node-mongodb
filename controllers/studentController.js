@@ -5,7 +5,7 @@ const router = express.Router();
 const Student = mongoose.model('Student');
 
 router.get('/', (req, res) => {
-    res.render('student/addOrEdit', {
+    res.render('./student/addOrEdit', {
         viewTitle: 'Insert Student',
     });
 });
@@ -48,7 +48,7 @@ async function updateRecord(req, res) {
 router.get('/list', async (req, res) => {
     try {
         const docs = await Student.find({});
-        res.render('student/list', {
+        res.render('./student/list', {
             list: docs,
         });
     } catch (err) {
@@ -59,7 +59,7 @@ router.get('/list', async (req, res) => {
 router.get('/:id', async (req, res) => {
     try {
         const doc = await Student.findById(req.params.id);
-        res.render('student/addOrEdit', {
+        res.render('./student/addOrEdit', {
             viewTitle: 'Update Student',
             student: doc,
         });

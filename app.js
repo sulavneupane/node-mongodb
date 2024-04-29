@@ -29,7 +29,7 @@ app.engine(
         handlebars: allowInsecurePrototypeAccess(handlebars),
         extname: 'hbs',
         defaultLayout: 'MainLayout',
-        layoutsDir: __dirname + '/views/layouts/',
+        layoutsDir: './views/layouts/',
     })
 );
 
